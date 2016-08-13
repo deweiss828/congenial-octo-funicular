@@ -1,24 +1,12 @@
-
-
-
-var BlogItem = React.createClass({
-	propTypes: {
-		title: React.PropTypes.string.isRequired,
-
-		date: React.PropTypes.instanceOf(Date).isRequired,
-		content: React.PropTypes.string.isRequired,
-		imgUrl: React.PropTypes.string
-	},
+var Navbar = React.createClass({
+	propTypes: { },
 	render: function() {
 		return (
-			React.createElement('div', {},
-				React.createElement('h2', {}, this.props.title),
-				React.createElement('h4', {},
-					this.props.date.toDateString()),
-				React.createElement('p', {}, this.props.title),
-				React.createElement('img', {
-					src: this.props.imgUrl
-				})
+			React.createElement('ul', { className: 'navbar'},
+				React.createElement('li', {}, 'ABOUT'),
+				React.createElement('li', {}, 'CONTACT'),
+				React.createElement('li', {}, 'WORK'),
+				React.createElement('li', {}, 'OTHER')
 			)
 		)
 	}
@@ -50,14 +38,9 @@ var firstBlog ={
 }
 
 
-var rootElement = React.createElement('div', {},
-		React.createElement(BlogItem,firstBlog),
-		React.createElement(BlogForm, {blog:{title: '',
-			date: '',
-			content: '',
-			imgUrl: ''
-			}
-		})
+var rootElement = React.createElement('div', { className: 'splash'},
+		React.createElement(Navbar, { className: 'navbar'}),
+		React.createElement('div')
 	)
 
 ReactDOM.render(rootElement, document.getElementById('react-app'))
