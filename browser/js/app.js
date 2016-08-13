@@ -1,13 +1,17 @@
+import React, { Component } from 'react'
+import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
+
+
+
 var Navbar = React.createClass({
-	propTypes: { },
 	render: function() {
 		return (
-			React.createElement('ul', { className: 'navbar'},
-				React.createElement('li', {}, 'ABOUT'),
-				React.createElement('li', {}, 'CONTACT'),
-				React.createElement('li', {}, 'WORK'),
-				React.createElement('li', {}, 'OTHER')
-			)
+			<ul className="navbar">
+				<li><Link to="about">About</Link></li>
+				<li><Link to="/about">Other</Link></li>
+				<li><Link to="/about">Writing</Link></li>
+				<li><Link to="/about">Contact</Link></li>
+			</ul>
 		)
 	}
 })
@@ -29,18 +33,49 @@ var BlogForm = React.createClass({
 	}
 })
 
+// var AboutMe = React.createClass({
+// 	render: function() {
+// 		return (
+// 			React.createElement('div', {},
+// 				React.createElement('h1', {}, 'This is the heading'),
+// 				React.createElement('p', {}, 'This is the body')
+// 			)
+// 		)
+// 	}
+// })
 
-var firstBlog ={
-	title: 'My week at camp',
-	date: new Date(2016, 08, 09),
-	content: 'I will take back appreciation from camp.',
-	imgUrl: './images/camp2016.jpg'
-}
+var AboutMe = React.createClass({
+	render () {
+		return (
+			<div>
+				<h1>This is the heading!!!</h1>
+				<p>This is the body</p>
+			</div>
+		)
+	}
+})
 
 
-var rootElement = React.createElement('div', { className: 'splash'},
-		React.createElement(Navbar, { className: 'navbar'}),
-		React.createElement('div')
-	)
+var RootElement = React.createClass({
+	render () {
+		return (
+			<div className='splash'>
+			<Navbar className='navbar'/>
+			</div>
+		)
+	}
+})
 
-ReactDOM.render(rootElement, document.getElementById('react-app'))
+export default RootElement;
+
+
+// ReactDOM.render(
+// 	(
+// 	<Router history={hashHistory}>
+// 		<Route path="/" component={RootElement}>
+// 			<Route path="about" component={AboutMe}>
+// 			</Route>
+// 		</Route>
+// 	</Router>
+// 	),
+// 	document.getElementById('react-app'));

@@ -50,6 +50,4 @@ app.get('/portfolio', function(req,res){
 	});
 });
 
-app.use('/admin', require('./admin'));
-
 module.exports = app;
