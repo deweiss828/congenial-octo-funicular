@@ -66,7 +66,17 @@ var RootElement = React.createClass({
 	}
 })
 
-export default RootElement;
+class App extends Component {
+	render() {
+		return (
+			<Router history={hashHistory}>
+			<Route path="/" component={RootElement}/>
+				<Route path="/about" component={AboutMe}/>
+		</Router>
+		)
+	}
+}
+export default App;
 
 
 // ReactDOM.render(
