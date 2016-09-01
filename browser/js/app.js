@@ -8,7 +8,7 @@ var Navbar = React.createClass({
 		return (
 			<ul className="navbar">
 				<li><Link to="about">About</Link></li>
-				<li><Link to="/about">Other</Link></li>
+				<li><Link to="/about">Photography</Link></li>
 				<li><Link to="/about">Writing</Link></li>
 				<li><Link to="/about">Contact</Link></li>
 			</ul>
@@ -79,13 +79,3 @@ class App extends Component {
 export default App;
 
 
-// ReactDOM.render(
-// 	(
-// 	<Router history={hashHistory}>
-// 		<Route path="/" component={RootElement}>
-// 			<Route path="about" component={AboutMe}>
-// 			</Route>
-// 		</Route>
-// 	</Router>
-// 	),
-// 	document.getElementById('react-app'));

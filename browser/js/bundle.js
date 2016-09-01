@@ -21516,7 +21516,7 @@
 					_react2.default.createElement(
 						_reactRouter.Link,
 						{ to: '/about' },
-						'Other'
+						'Photography'
 					)
 				),
 				_react2.default.createElement(
@@ -21619,17 +21619,6 @@
 	}(_react.Component);
 
 	exports.default = App;
-
-	// ReactDOM.render(
-	// 	(
-	// 	<Router history={hashHistory}>
-	// 		<Route path="/" component={RootElement}>
-	// 			<Route path="about" component={AboutMe}>
-	// 			</Route>
-	// 		</Route>
-	// 	</Router>
-	// 	),
-	// 	document.getElementById('react-app'));
 
 /***/ },
 /* 176 */
