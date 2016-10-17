@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var morgan = require('morgan');
-var path =require('path');
+var path = require('path');
 
 var bodyParser =require('body-parser');
 var cookieParser = require('cookie-parser');
@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 //it will serve that file
 app.use(express.static(path.join(__dirname, '../node_modules')))
 
-app.use(express.static(path.join(__dirname, '../browser')))
+app.use(express.static(path.join(__dirname, '../app')))
 app.use(express.static(path.join(__dirname, '../views')))
 
 app.use(bodyParser.json());
@@ -36,6 +36,11 @@ app.use(bodyParser.urlencoded({ extended:false }));
 
 
 //ROUTING:
+// This is necessary for browser history to work properly
+app.get('*', (req, res) => {
+	res.sendFile(path.resolve(__dirname, '../app', 'index.html'))
+})
+
 app.get('/',function(req,res){
 	console.log('trying to get slash')
 	res.sendFile(path.resolve('/Users/katherinemello/Desktop/Projects/personalWebsite/views/layout.html'));

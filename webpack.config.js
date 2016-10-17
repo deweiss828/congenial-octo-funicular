@@ -1,8 +1,13 @@
 module.exports = {
-  entry: './browser/js/main.js',
+  entry: './app/main.js',
   output: {
-    path: './browser/js',
+    path: './app',
     filename: 'bundle.js'
+  },
+  devServer: {
+    inline: true,
+    contentBase: './app',
+    port: 8100,
   },
   watch: true,
   module: {
@@ -15,5 +20,3 @@ module.exports = {
     ]
   }
 }
-
-

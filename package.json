@@ -4,6 +4,8 @@
   "description": "to get jobs ",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js",
     "scss": "node-sass scss/main.scss public/css/main.css"
