@@ -9,5 +9,5 @@ mongoose.connection.on('error',function(){
 })
 
 module.exports = {
-	Project: require('./project')
+	Photograph: require('./photograph')
 };
