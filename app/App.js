@@ -1,14 +1,17 @@
 import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 
-
+const NotFound = () => (
+	<h1>404... This page is not found!</h1>
+)
 
 var Navbar = React.createClass({
 	render: function() {
 		return (
 			<ul className="navbar">
-				<li><Link to="about">About</Link></li>
-				<li><Link to="/about">Photography</Link></li>
+				<li><Link onlyActiveOnIndex activeStyle={{color:'#53acff'}} to="/">Home</Link></li>
+				<li><Link activeStyle={{color:'#53acff'}} to="about">About</Link></li>
+				<li><Link activeStyle={{color:'#53acff'}} to="/photos">Photography</Link></li>
 				<li><Link to="/about">Writing</Link></li>
 				<li><Link to="/about">Contact</Link></li>
 			</ul>
@@ -44,23 +47,27 @@ var AboutMe = React.createClass({
 	}
 })
 
+const Home = () => (
+	<div>Home!</div>
+)
 
-var RootElement = React.createClass({
-	render () {
-		return (
-			<div className='splash'>
-			<Navbar className='navbar'/>
-			</div>
-		)
-	}
-})
+var Root = (props) => (
+	<div className='splash'>
+		<Navbar className='navbar'/>
+		{props.children}
+	</div>
+)
 
 class App extends Component {
 	render() {
 		return (
 			<Router history={browserHistory}>
-			<Route path="/" component={RootElement}/>
-				<Route path="/about" component={AboutMe}/>
+				<Route path="/" component={Root}>
+					<IndexRoute component={Home} />
+					<Route path="/about" component={AboutMe}/>
+					<Route path="/photos" component={AboutMe}/>
+					<Route path="*" component={NotFound}/>
+				</Route>
 		</Router>
 		)
 	}
