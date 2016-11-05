@@ -14,8 +14,6 @@
   "author": "Katherine Mello",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.4.8",
-    "angular-ui-router": "^0.2.15",
     "bluebird": "^3.0.5",
     "body-parser": "^1.14.1",
     "bootstrap": "^3.3.6",
