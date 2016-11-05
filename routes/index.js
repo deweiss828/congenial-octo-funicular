@@ -6,8 +6,8 @@ var path = require('path');
 var bodyParser =require('body-parser');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
-var models = require('../models');
-var Project = models.Project;
+// var models = require('../models');
+// var Project = models.Project;
 var jade = require('jade');
 
 app.set('views', __dirname + '..' + '/views'); // general config
@@ -41,19 +41,19 @@ app.get('*', (req, res) => {
 	res.sendFile(path.resolve(__dirname, '../app', 'index.html'))
 })
 
-app.get('/',function(req,res){
+app.get('/', function(req, res){
 	console.log('trying to get slash')
 	res.sendFile(path.resolve('/Users/katherinemello/Desktop/Projects/personalWebsite/views/layout.html'));
 });
 
-app.get('/portfolio', function(req,res){
-	Project.find({}).exec()
-		.then(function(projects){
-			res.render('portfolio', { projects:projects });
-		})
-	.then(null, function(err){
-		console.error(err);
-	});
-});
+// app.get('/portfolio', function(req,res){
+// 	Project.find({}).exec()
+// 		.then(function(projects){
+// 			res.render('portfolio', { projects:projects });
+// 		})
+// 	.then(null, function(err){
+// 		console.error(err);
+// 	});
+// });
 
 module.exports = app;
