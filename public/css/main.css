@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Proza+Libre|Roboto');
+
 html {
   background: url("http://i.imgur.com/MhVaZTo.png") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; }
+  background-size: cover;
+  font-size:12px;
+  font-family:'Roboto', sans-serif;
+}
 
 body {
-  margin: 0; }
+  margin: 0px;
+  box-sizing:border-box;
+}
 
 .navbar {
   height: 10vh;
@@ -17,4 +24,120 @@ body {
   padding: 0;
   display: flex;
   justify-content: space-around;
-  align-items: center; }
+  align-items: center;
+}
+
+
+#resume-container {
+  background:#e6ecf7;
+  margin: 5px;
+}
+
+#header {
+  padding:0 25%;
+}
+
+#icons img {
+  width: 1.5rem;
+}
+
+#icons span {
+  padding-left: 1rem;
+  font-size:.9rem;
+}
+
+#footnote {
+  text-align:right;
+  font-size: .8rem;
+  position:absolute;
+  bottom:1rem;
+  right: 1rem;
+}
+
+.section {
+  margin-bottom:2rem;
+}
+
+.col-left {
+  padding:1rem;
+  flex-basis:33%;
+  background:#bfd2ef;
+  position:relative;
+}
+
+.col-right {
+  padding:2rem;
+  flex-basis:67%;
+  background:#bfd2ef;
+}
+
+/* Inner Columns */
+.flex-container {
+  display:flex;
+}
+
+.inner-container-left {
+  flex-basis:67%;
+}
+
+.inner-container-right {
+  flex-basis:33%;
+  text-align:right;
+}
+
+b {
+  text-decoration: underline;
+}
+
+hr {
+  border:.1rem solid #70A1FA;
+}
+
+a:link {
+  color:blue;
+}
+
+a:visited {
+  color:blue;
+}
+
+p {
+  margin: .5rem auto .2rem auto;
+}
+
+h4 {
+  margin:.25rem;
+}
+
+h3 {
+  color:#70A1FA;
+  margin:.25rem;
+}
+
+ul {
+  margin:.2rem;
+}
+
+/* Media Queries */
+@media (min-width: 580px) {
+  html {
+    font-size:14px;
+  }
+  #resume-container {
+    display:flex;
+    align-items:stretch;
+  }
+  .col-right {
+    background:#e6ecf7 ;
+  }
+  #header {
+    padding:0;
+    text-align:left;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size:16px;
+  }
+}
