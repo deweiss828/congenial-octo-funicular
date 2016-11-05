@@ -1,9 +1,9 @@
 var http = require('http');
 var server = http.createServer();
 
-
-server.listen(8000, function(){
- 	console.log('Server listening on port 8000!');
+var PORT = process.env.PORT || 8000
+server.listen(PORT, function(){
+ 	console.log('Server listening on port ' + PORT);
  });
 
 server.on('request', require('./routes'))
