@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-import Resume from './components/Resume'
-import Home from './components/Home'
+import Resume from './Resume'
+import Home from './Home'
 
 const NotFound = () => (
 	<h1>404... This page is not found!</h1>
