@@ -29,7 +29,6 @@ body {
 
 
 #resume-container {
-  background:#e6ecf7;
   margin: 5px;
 }
 
@@ -56,6 +55,10 @@ body {
 
 .section {
   margin-bottom:2rem;
+}
+.col {
+  border-radius:.3rem;
+  margin:.7rem;
 }
 
 .col-left {
@@ -118,6 +121,16 @@ ul {
   margin:.2rem;
 }
 
+#home-container {
+  width: 20rem;
+  background: white;
+  border-radius:1rem;
+  padding:.5rem;
+  font-size:1.5rem;
+  margin:25% auto;
+  background:#e6ecf7;
+  color:#70A1FA;
+}
 /* Media Queries */
 @media (min-width: 580px) {
   html {
@@ -128,7 +141,7 @@ ul {
     align-items:stretch;
   }
   .col-right {
-    background:#e6ecf7 ;
+    background:#e6ecf7;
   }
   #header {
     padding:0;
