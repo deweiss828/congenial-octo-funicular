@@ -34,17 +34,15 @@ app.use(bodyParser.urlencoded({ extended:false }));
 // 	saveUninitialized: false
 // }));
 
+app.use('/api', require('./api'))
 
 //ROUTING:
 // This is necessary for browser history to work properly
 app.get('*', (req, res) => {
+	console.log('get all')
 	res.sendFile(path.resolve(__dirname, '../public', 'index.html'))
 })
 
-app.get('/', function(req, res){
-	console.log('trying to get slash')
-	res.sendFile(path.resolve('/Users/katherinemello/Desktop/Projects/personalWebsite/views/layout.html'));
-});
 
 // app.get('/portfolio', function(req,res){
 // 	Project.find({}).exec()
