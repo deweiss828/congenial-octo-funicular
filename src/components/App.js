@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
-import Resume from './components/Resume'
-import Home from './components/Home'
+import Resume from './Resume'
+import Home from './Home'
+
+import '../styles/main.scss'
 
 const NotFound = () => (
 	<h1>404... This page is not found!</h1>
@@ -43,7 +45,7 @@ var AboutMe = React.createClass({
 	render () {
 		return (
 			<div>
-				<h1>This is the heading!!!</h1>
+				<h1>This is the what!!!</h1>
 				<p>This is the body</p>
 			</div>
 		)

@@ -1,22 +1,5 @@
-module.exports = {
-  entry: './app/main.js',
-  output: {
-    path: './app',
-    filename: 'bundle.js'
-  },
-  devServer: {
-    inline: true,
-    contentBase: './app',
-    port: 8100,
-  },
-  watch: true,
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel'
-      }
-    ]
-  }
+if (process.env === 'production') {
+	module.exports = require('./webpack.prod.config.js')
+} else {
+	module.exports = require('./webpack.dev.config.js')
 }

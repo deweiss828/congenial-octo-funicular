@@ -21,8 +21,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 //it will serve that file
 app.use(express.static(path.join(__dirname, '../node_modules')))
 
-app.use(express.static(path.join(__dirname, '../app')))
-app.use(express.static(path.join(__dirname, '../views')))
+app.use(express.static(path.join(__dirname, '../src')))
+// app.use(express.static(path.join(__dirname, '../views')))
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended:false }));
@@ -38,7 +38,7 @@ app.use(bodyParser.urlencoded({ extended:false }));
 //ROUTING:
 // This is necessary for browser history to work properly
 app.get('*', (req, res) => {
-	res.sendFile(path.resolve(__dirname, '../app', 'index.html'))
+	res.sendFile(path.resolve(__dirname, '../public', 'index.html'))
 })
 
 app.get('/', function(req, res){

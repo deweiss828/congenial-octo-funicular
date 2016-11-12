@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Proza+Libre|Roboto');
+
+html {
+  background: url("http://i.imgur.com/MhVaZTo.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size:12px;
+  font-family:'Roboto', sans-serif;
+}
+
+body {
+  margin: 0px;
+  box-sizing:border-box;
+}
+
+.navbar {
+  height: 3em;
+  background-color: #DEE5ED;
+  opacity: 0.5;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    text-decoration:none;
+  }
+}
+
+/* Media Queries */
+@media (min-width: 580px) {
+  html {
+    font-size:14px;
+  }
+  #resume-container {
+    display:flex;
+    align-items:stretch;
+  }
+  .col-right {
+    background:#e6ecf7;
+  }
+  #header {
+    padding:0;
+    text-align:left;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size:16px;
+  }
+}
