@@ -8,7 +8,7 @@ module.exports = {
     'webpack-hot-middleware/client',
     './src/index'
   ],
-
+  watch: true,
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',

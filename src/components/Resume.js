@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/resume.scss'
 
 const Resume = () => (
 	<div id="resume-container">

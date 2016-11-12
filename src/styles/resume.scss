@@ -1,0 +1,92 @@
+#resume-container {
+  margin: 5px;
+}
+
+#header {
+  padding:0 25%;
+}
+
+#icons img {
+  width: 1.5rem;
+}
+
+#icons span {
+  padding-left: 1rem;
+  font-size:.9rem;
+}
+
+#footnote {
+  text-align:right;
+  font-size: .8rem;
+  position:absolute;
+  bottom:1rem;
+  right: 1rem;
+}
+
+.section {
+  margin-bottom:2rem;
+}
+.col {
+  border-radius:.3rem;
+  margin:.7rem;
+}
+
+.col-left {
+  padding:1rem;
+  flex-basis:33%;
+  background:#bfd2ef;
+  position:relative;
+}
+
+.col-right {
+  padding:2rem;
+  flex-basis:67%;
+  background:#bfd2ef;
+}
+
+/* Inner Columns */
+.flex-container {
+  display:flex;
+}
+
+.inner-container-left {
+  flex-basis:67%;
+}
+
+.inner-container-right {
+  flex-basis:33%;
+  text-align:right;
+}
+
+b {
+  text-decoration: underline;
+}
+
+hr {
+  border:.1rem solid #70A1FA;
+}
+
+a:link {
+  color:blue;
+}
+
+a:visited {
+  color:blue;
+}
+
+p {
+  margin: .5rem auto .2rem auto;
+}
+
+h4 {
+  margin:.25rem;
+}
+
+h3 {
+  color:#70A1FA;
+  margin:.25rem;
+}
+
+ul {
+  margin:.2rem;
+}

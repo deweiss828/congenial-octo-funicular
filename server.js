@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const path = require('path');
-const bodyParser =require('body-parser');
+const bodyParser = require('body-parser');
 
 // const PORT = process.env.PORT || 8000
 // server.listen(PORT, function(){
@@ -24,6 +24,9 @@ if (process.env.NODE_ENV!=='production') {
 }
 const indexPath = path.join(__dirname, '/public/index.html')
 const publicPath = express.static(path.join(__dirname, '/public'));
+
+// app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: webpackConfig.output.publicPath }));
+// app.use(webpackHotMiddleware(compiler));
 
 app.use('/public', publicPath)
 
