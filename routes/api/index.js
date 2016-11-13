@@ -7,7 +7,9 @@ router.get('/', (req, res) => {
 })
 router.get('/photos', (req, res, next) => {
 	Photo.findAll()
-	.then(photos => res.json(photos))
+	.then(photos => {
+		console.log(photos)
+		res.json(photos)})
 	.catch(next)
 })
 
@@ -16,6 +18,14 @@ router.post('/photos', (req, res, next) => {
 		returning: true
 	})
 	.then(photo => res.json(photo))
+	.catch(next)
+})
+
+router.post('/many-photos', (req, res, next) => {
+	Photo.bulkCreate(req.body, {
+		returning: true
+	})
+	.then(photos => res.json(photos))
 	.catch(next)
 })
 

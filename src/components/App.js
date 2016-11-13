@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import Resume from './Resume'
 import Home from './Home'
-import Photo from './Photo'
+import PhotoContainer from './Photo'
 
 import '../styles/main.scss'
 
@@ -68,7 +68,7 @@ class App extends Component {
 					<IndexRoute component={Home} />
 					<Route path="/about" component={AboutMe}/>
 					<Route path="/resume" component={Resume}/>
-					<Route path="/photos" component={Photo} />
+					<Route path="/photos" component={PhotoContainer} />
 					<Route path="*" component={NotFound}/>
 				</Route>
 		</Router>

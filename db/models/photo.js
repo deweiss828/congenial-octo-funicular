@@ -14,6 +14,9 @@ const Photo = db.define('photo', {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
+	quote: {
+		type: Sequelize.JSON
+	},
 	date: Sequelize.DATE,
 });
 
