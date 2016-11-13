@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router'
 import Resume from './Resume'
 import Home from './Home'
-import PhotoContainer from './Photo'
+import PhotoContainer from './PhotoContainer'
 
 import '../styles/main.scss'
 
