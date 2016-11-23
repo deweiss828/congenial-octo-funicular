@@ -3,3 +3,4 @@ public/images
 bin
 public/*.hot-update.js
 public/*.hot-update.json
+config

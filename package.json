@@ -8,8 +8,8 @@
     "build": "NODE_ENV=production webpack  --progress --colors",
     "dev": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "nodemon main.js",
-    "start": "node main.js",
+    "start-dev": "NODE_ENV=development nodemon main.js",
+    "start": "NODE_ENV=production node main.js",
     "scss": "node-sass scss/main.scss public/css/main.css"
   },
   "author": "Katherine Mello",
