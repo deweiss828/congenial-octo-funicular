@@ -4,9 +4,7 @@ const morgan = require('morgan');
 const path = require('path');
 const bodyParser = require('body-parser');
 const webpack = require('webpack')
-const webpackDevMiddleware = require('webpack-dev-middleware')
-const webpackHotMiddleware = require('webpack-hot-middleware')
-const config = require('./webpack.dev.config.js')
+const config = require('./webpack.config.js')
 const compiler = webpack(config)
 
 // const PORT = process.env.PORT || 8000
@@ -24,8 +22,8 @@ app.use(bodyParser.urlencoded({ extended:false }));
 
 if (process.env.NODE_ENV!=='production') {
 	app.use(morgan('dev'));
-  app.use(webpackHotMiddleware(compiler))
-  app.use(webpackDevMiddleware(compiler, {
+  app.use(require('webpack-hot-middleware')(compiler))
+  app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
     publicPath: config.output.publicPath
   }))
