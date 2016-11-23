@@ -12,6 +12,9 @@
     "start": "NODE_ENV=production node main.js",
     "scss": "node-sass scss/main.scss public/css/main.css"
   },
+  "engines": {
+    "node": "6.2.1"
+  },
   "author": "Katherine Mello",
   "license": "ISC",
   "dependencies": {
