@@ -1,0 +1,26 @@
+#photo-container {
+	height:100%;
+	padding:1em;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	img {
+		width:18em;
+		border-radius:2em;
+	}
+	figure {
+		background: #383927;
+		padding:.7em;
+		height:100%;
+		margin:1em;
+	}
+	figcaption {
+		text-align: center;
+		font: #B2CAE1;
+		font-family: fantasy;
+		color:#b2cae1;
+		font-size:1em;
+		padding-top:.3em;
+		font-style: italic;
+	}
+}

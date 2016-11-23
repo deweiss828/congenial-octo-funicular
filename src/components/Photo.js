@@ -1,11 +1,25 @@
 import React, { Component } from 'react'
-import '../styles/photo.scss'
 
-const Photo = () => (
-	<figure id="photo-container">
-		<img src="http://imgur.com/XDvNck4.png"/>
-		<figcaption>Manhattan</figcaption>
-	</figure>
-)
+const Photo = (props) => {
+	const caption = (props.photo.quote) ? (
+		<figcaption>
+			{props.photo.caption}<br/>
+			{props.photo.location}<br/>
+			{props.photo.quote.text}<br/>
+			{props.photo.quote.author}<br/>
+		</figcaption>
+		) : (
+		<figcaption>
+		{props.photo.caption}<br/>
+		{props.photo.location}
+		</figcaption>
+		)
 
-export default Photo
+	return (
+		<figure>
+			<img src={props.photo.imgSrc}/>
+			{caption}
+		</figure>
+)}
+
+	export default Photo
