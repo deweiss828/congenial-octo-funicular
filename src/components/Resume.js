@@ -117,8 +117,8 @@ const Resume = () => (
 					</div>
 				</div>
 				<ul>
-				    <li>developed (July 2016) a <a href="https://www.homelister.com/">MEAN stack app</a> for selling properties online --  focus on testing and debugging</li>
-				    <li>currently leading a team of 3 engineers in building a customer-service focused <a href="http://larson-self-diagnosis.appspot.com/">chatbot</a> that uses ML to deliver seamless user experience</li>
+				    <li>developed (July - Oct 2016) a <a href="https://www.homelister.com/">MEAN stack app</a> for selling properties online --  focus on testing and debugging</li>
+				    <li>collaborated with a team of 3 engineers to build a customer-service focused <a href="http://larson-self-diagnosis.appspot.com/">chatbot</a> that uses ML to deliver seamless user experience</li>
 				</ul>
 				<br/>
 				<div className="flex-container">
@@ -163,7 +163,7 @@ const Resume = () => (
 						<span>A customer service bot for efficient self-diagnose of issues</span><br/>
 					</div>
 					<div className="inner-container-right">
-						<span>Aug. 2016 - current</span><br/>
+						<span>Aug. 2016 - Oct. 2016</span><br/>
 						<span>re# studio</span><br/>
 					</div>
 				</div>
