@@ -39,7 +39,6 @@ app.use('/api', require('./api'))
 //ROUTING:
 // This is necessary for browser history to work properly
 app.get('*', (req, res) => {
-	console.log('get all')
 	res.sendFile(path.resolve(__dirname, '../public', 'index.html'))
 })
 
