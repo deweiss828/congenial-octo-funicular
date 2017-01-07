@@ -3,6 +3,7 @@ import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 're
 import Resume from './Resume'
 import Home from './Home'
 import PhotoContainer from './PhotoContainer'
+import BlogPreview from './BlogPreview'
 
 import '../styles/main.scss'
 
@@ -17,7 +18,7 @@ var Navbar = React.createClass({
 				<li><Link onlyActiveOnIndex activeStyle={{color:'#53acff'}} to="/">Home</Link></li>
 				<li><Link activeStyle={{color:'#53acff'}} to="about">About</Link></li>
 				<li><Link activeStyle={{color:'#53acff'}} to="/photos">Photography</Link></li>
-				<li><Link to="/about">Writing</Link></li>
+				<li><Link to="/writing">Writing</Link></li>
 				<li><Link to="/about">Contact</Link></li>
 				<li><Link to="/resume">Resume</Link></li>
 			</ul>
@@ -25,22 +26,7 @@ var Navbar = React.createClass({
 	}
 })
 
-var BlogForm = React.createClass({
-	propTypes:{
-		blog: React.PropTypes.object.isRequired
-	},
-	render: function() {
-		return (
-			React.createElement('form', {},
-				React.createElement('input', {htmlFor: 'title', placeholder: 'Title', value: this.props.blog.title}),
-				React.createElement('input', {htmlFor: 'date', placeholder: 'Date', value: this.props.blog.date}),
-				React.createElement('textarea', {htmlFor:'content', placeholder: 'Content', value: this.props.blog.content}),
-				React.createElement('input', {htmlFor:'imgUrl', placeholder: 'Image Url', value: this.props.blog.imgUrl}),
-				React.createElement('button', {type: 'submit'})
-			)
-		)
-	}
-})
+
 
 var AboutMe = React.createClass({
 	render () {
@@ -69,6 +55,7 @@ class App extends Component {
 					<Route path="/about" component={AboutMe}/>
 					<Route path="/resume" component={Resume}/>
 					<Route path="/photos" component={PhotoContainer} />
+					<Route path="/writing" component={BlogPreview} />
 					<Route path="*" component={NotFound}/>
 				</Route>
 		</Router>

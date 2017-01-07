@@ -5,6 +5,7 @@
 // to get access to the Song model.
 
 const Photo = require('./photo');
+const BlogPost = require('./blog');
 
 // Form the associations
 
@@ -24,6 +25,7 @@ const Photo = require('./photo');
 
 module.exports = {
   Photo: Photo,
+  BlogPost: BlogPost
   // Song: Song,
   // Artist: Artist,
   // Playlist: Playlist

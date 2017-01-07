@@ -1,0 +1,40 @@
+$paper-yellow: rgb(248,236,194);
+$red: rgba(255,85,91, .8);
+$red-lighter: rgba(255,85,91, .2);
+$line-blue: rgb(166, 255, 237);
+
+#blog-preview {
+	font-size: .8rem;
+	line-height: 1rem;
+	background-image:  -webkit-linear-gradient(left, $red-lighter, $red-lighter), -webkit-linear-gradient(left, $red, $red), -webkit-linear-gradient(top, $paper-yellow 0px, $paper-yellow 69px, rgba(255,255,255,0) 70px), -webkit-repeating-linear-gradient($paper-yellow 0px, $paper-yellow 1rem, $line-blue 19px, $paper-yellow 30px);
+
+
+    background-image:  -moz-linear-gradient(left, $red-lighter, $red-lighter), -moz-linear-gradient(left, $red, $red), -moz-linear-gradient(top, $paper-yellow 0px, $paper-yellow 69px, rgba(255,255,255,0) 70px), -moz-repeating-linear-gradient($paper-yellow 0px, $paper-yellow 18px, $line-blue 19px, $paper-yellow 20px);
+    background-image:  -ms-linear-gradient(left, $red-lighter, $red-lighter), -ms-linear-gradient(left, $red, $red), -ms-linear-gradient(top, $paper-yellow 0px, $paper-yellow 69px, rgba(255,255,255,0) 70px), -ms-repeating-linear-gradient($paper-yellow 0px, $paper-yellow 18px, $line-blue 19px, $paper-yellow 20px);
+    background-image:  -o-linear-gradient(left, $red-lighter, $red-lighter), -o-linear-gradient(left, $red, $red), -o-linear-gradient(top, $paper-yellow 0px, $paper-yellow 69px, rgba(255,255,255,0) 70px), -o-repeating-linear-gradient($paper-yellow 0px, $paper-yellow 18px, $line-blue 19px, $paper-yellow 20px);
+
+
+    background-image:  linear-gradient(left, $red-lighter, $red-lighter), linear-gradient(left, $red, $red),
+    	linear-gradient(top, $paper-yellow 0px, $paper-yellow 69px, $paper-yellow 70px),
+    	repeating-linear-gradient($paper-yellow 0px, $paper-yellow 18px, $line-blue 19px, $paper-yellow 20px);
+
+
+    background-size: 1px, 1px, auto, auto 20px;
+    background-repeat: repeat-y, repeat-y, no-repeat, repeat;
+    background-position: 90% 0px, 10% 0px, 0px 0px, 0px 0px;
+    width: 250px;
+    height: 500px;
+
+    #entry-row {
+    	display:flex;
+    	justify-content: space-between;
+
+    	.left {
+    		display: flex;
+    	}
+    	.right {
+    		display: flex;
+    	}
+    }
+
+}
